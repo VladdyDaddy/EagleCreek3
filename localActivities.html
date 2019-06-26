@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eagle Creek Lodge</title>
-	<link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
@@ -17,115 +18,138 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
-<style>
-  html,body{overflow-x: hidden;}
-  html { overflow-y: scroll; }
-
-  .navCustom{
-    background-color: #b59a77;
-
-  }
-  .bodyCustom{
-    background-color: #dbc4a6;
-    padding-top: 2em;
-  }
-  .fontCustom{
-    font-family: "Zilla Slab",serif!important;
-  }
-  .quotes{
-    font-family: "Zilla Slab",serif!important;
-    text-align: center;
-    font-size: 28px;
-    color: #000000;
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-  .left{
-    text-align: left;
-  }
-  .right{
-    text-align: right;
-  }
-  .center{
-    text-align: center;
-  }
-  .pad-right1{
-    padding-right: 4em;
-  }
-  .brown1{
-    color: #4c3216;
-  }
-  @media (max-width: 991px) {
-    nav.navbar {
-      background: lightgray !important;
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
     }
-  }
-  #header_placeholder {
-    height:70px;
-    width:100%;
-    display:none;
-}
 
-img{
-  max-width: 100%;
-  height: auto;
-}
+    html {
+      overflow-y: scroll;
+    }
 
-.nails img{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
+    .navCustom {
+      background-color: #b59a77;
 
-}
+    }
 
-  .padBot{
-    padding-bottom: 5em;
-  }
-  .pad1{
-    padding: 1em;
-  }
+    .bodyCustom {
+      background-color: #dbc4a6;
+      padding-top: 2em;
+    }
 
-  .margin-bot{
-    margin-bottom: 3em;
-  }
+    .fontCustom {
+      font-family: "Zilla Slab", serif !important;
+    }
 
-      .img-responsivex {
-        height: auto;
-        width: auto;
-        max-height: 77px;
-        max-width: 255px;
+    .quotes {
+      font-family: "Zilla Slab", serif !important;
+      text-align: center;
+      font-size: 28px;
+      color: #000000;
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .pad-right1 {
+      padding-right: 4em;
+    }
+
+    .brown1 {
+      color: #4c3216;
+    }
+
+    @media (max-width: 991px) {
+      nav.navbar {
+        background: lightgray !important;
       }
+    }
 
-      .margin-card{
-        margin-bottom: 1em;
-      }
-      .pic-individual{
-        padding-bottom: 2em;
-      }
-    </style>
+    #header_placeholder {
+      height: 70px;
+      width: 100%;
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nails img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-right: auto;
+      margin-left: auto;
+
+    }
+
+    .padBot {
+      padding-bottom: 5em;
+    }
+
+    .pad1 {
+      padding: 1em;
+    }
+
+    .margin-bot {
+      margin-bottom: 3em;
+    }
+
+    .img-responsivex {
+      height: auto;
+      width: auto;
+      max-height: 77px;
+      max-width: 255px;
+    }
+
+    .margin-card {
+      margin-bottom: 1em;
+    }
+
+    .pic-individual {
+      padding-bottom: 2em;
+    }
+
+    .captchaWrap {
+      padding-top: 2em;
+    }
+  </style>
 
 
-  </head>
+</head>
 
-  <body>
-    <!--================Header Menu Area =================-->
-    <header class="header_area navCustom">
-      <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container box_1620">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="logo"
-                class="img-responsivex"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+<body>
+  <!--================Header Menu Area =================-->
+  <header class="header_area navCustom">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="logo"
+              class="img-responsivex"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav mr-auto">
@@ -160,55 +184,55 @@ img{
 
 
   <div class="bodyCustom">
-      <div class="container">
-          <h1>Local Activities</h1>
-          <div class="row">
-            <div class="col-lg-12">
-              <img src="img\localActivities\eaglecreekmap.PNG">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="container">
-          <h1 class="center">Eagle Creek Lodge is the perfect place to stay for local activities!</h1>
-          <div class="row padBot">
-            <div class="col-lg-6">
-              <h2 class="card pad1 margin-card">Located 12 miles from Penn State Campus</h2>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="card pad1 margin-card">10 miles from Black Moshannon state park</h2>
-              </div>
-            <div class="col-lg-6">
-                <h2 class="card pad1 margin-card">Plan your retreats at scenic Bald Eagle Valley</h2>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="card pad1 margin-card">Plan your stay for arts fest!</h2>
-            </div>
-          </div>
-        </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 nails pic-individual">
-            <img class="img-responsive" src="img/localActivities/mosh.jpg" alt="Moshannon">
-          </div>
-          <div class="col-lg-6 nails pic-individual">
-            <img class="img-responsive" src="img\localActivities\ArtsFest2.jpg" alt="artsfest">
-          </div>
+    <div class="container">
+      <h1>Local Activities</h1>
+      <div class="row">
+        <div class="col-lg-12">
+          <img src="img\localActivities\eaglecreekmap.PNG">
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 nails pic-individual">
-            <img class="img-responsive" src="img\localActivities\campus2.jpg" alt="Moshannon">
-          </div>
-          <div class="col-lg-6 nails pic-individual">
-            <img class="img-responsive" src="img\localActivities\bald.jpg" alt="artsfest">
-          </div>
+
+    <div class="container">
+      <h1 class="center">Eagle Creek Lodge is the perfect place to stay for local activities!</h1>
+      <div class="row padBot">
+        <div class="col-lg-6">
+          <h2 class="card pad1 margin-card">Located 12 miles from Penn State Campus</h2>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="card pad1 margin-card">10 miles from Black Moshannon state park</h2>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="card pad1 margin-card">Plan your retreats at scenic Bald Eagle Valley</h2>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="card pad1 margin-card">Plan your stay for arts fest!</h2>
         </div>
       </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 nails pic-individual">
+          <img class="img-responsive" src="img/localActivities/mosh.jpg" alt="Moshannon">
+        </div>
+        <div class="col-lg-6 nails pic-individual">
+          <img class="img-responsive" src="img\localActivities\ArtsFest2.jpg" alt="artsfest">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 nails pic-individual">
+          <img class="img-responsive" src="img\localActivities\campus2.jpg" alt="Moshannon">
+        </div>
+        <div class="col-lg-6 nails pic-individual">
+          <img class="img-responsive" src="img\localActivities\bald.jpg" alt="artsfest">
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -220,29 +244,36 @@ img{
           <div class="single-footer-widget">
             <h6>About Us</h6>
             <p>
-              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State sporting event, Eagle Creek Lodge is the place for you!
+              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State
+              sporting event, Eagle Creek Lodge is the place for you!
             </p>
           </div>
         </div>
-        <div class="col-lg-4  col-md-6 col-sm-6 center">
+        <div class="col-lg-4 col-md-6 col-sm-6 center">
           <div class="single-footer-widget">
             <h6 class="pad-right1">Newsletter</h6>
             <p class="pad-right1">Stay up to date with our latest news</p>
             <div class="" id="mc_embed_signup">
 
-              <form target="_blank" action="insert.php" method="post" class="form-inline">
+              <form target="_blank" action="captcha2.php" method="post" class="form-inline">
 
                 <div class="d-flex flex-row">
 
                   <input class="form-control" name="email" placeholder="Enter Email" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-                  <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <!-- <div class="captchaWrap">
+                    <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"></div>
+                  </div> -->
+                  <button id="button1" type="submit" value="Submit" class="click-btn btn btn-default"><span
+                      class="lnr lnr-arrow-right"></span></button>
                   <!--<div style="position: absolute; left: -5000px;">
                     <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                   </div>-->
 
+                </div>
+                <div class="captchaWrap">
+                  <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"
+                    data-callback="enableBtn"></div>
                 </div>
                 <div class="info"></div>
               </form>
@@ -279,6 +310,17 @@ img{
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(window).on('load', function () {
+      document.getElementById("button1").disabled = true;
+    });
+  </script>
 
+  <script>
+    function enableBtn() {
+      document.getElementById("button1").disabled = false;
+    }
+  </script>
 </body>
+
 </html>

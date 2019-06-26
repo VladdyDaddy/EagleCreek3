@@ -18,7 +18,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
   <style>
     html,
@@ -98,6 +98,9 @@
       display: none;
     }
 
+    .captchaWrap{
+  padding-top: 2em;
+}
     .rotateimg180 {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
@@ -239,30 +242,33 @@
           <div class="single-footer-widget">
             <h6>About Us</h6>
             <p>
-              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State
-              sporting event, Eagle Creek Lodge is the place for you!
+              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State sporting event, Eagle Creek Lodge is the place for you!
             </p>
           </div>
         </div>
-        <div class="col-lg-4  col-md-6 col-sm-6 center">
+        <div class="col-lg-4 col-md-6 col-sm-6 center">
           <div class="single-footer-widget">
             <h6 class="pad-right1">Newsletter</h6>
             <p class="pad-right1">Stay up to date with our latest news</p>
             <div class="" id="mc_embed_signup">
 
-              <form target="_blank" action="insert.php" method="post" class="form-inline">
+              <form target="_blank" action="captcha2.php" method="post" class="form-inline">
 
                 <div class="d-flex flex-row">
 
                   <input class="form-control" name="email" placeholder="Enter Email" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-                  <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <!-- <div class="captchaWrap">
+                    <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"></div>
+                  </div> -->
+                  <button id="button1" type="submit" value="Submit" class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
                   <!--<div style="position: absolute; left: -5000px;">
                     <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                   </div>-->
 
+                </div>
+                <div class="captchaWrap">
+                  <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu" data-callback="enableBtn"></div>
                 </div>
                 <div class="info"></div>
               </form>
@@ -299,7 +305,17 @@
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  $(window).on('load', function () {
+    document.getElementById("button1").disabled = true;
+  });
+  </script>
 
+  <script>
+    function enableBtn(){
+      document.getElementById("button1").disabled = false;
+    }
+  </script>
 </body>
 
 </html>

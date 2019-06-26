@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eagle Creek Lodge</title>
-	<link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
@@ -17,68 +18,91 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
-<style>
-  html,body{overflow-x: hidden;}
-  html { overflow-y: scroll; }
-
-  .navCustom{
-    background-color: #b59a77;
-
-  }
-  .bodyCustom{
-    background-color: #dbc4a6;
-    padding-top: 2em;
-  }
-  .fontCustom{
-    font-family: "Zilla Slab",serif!important;
-  }
-  .quotes{
-    font-family: "Zilla Slab",serif!important;
-    text-align: center;
-    font-size: 28px;
-    color: #000000;
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-  .left{
-    text-align: left;
-  }
-  .right{
-    text-align: right;
-  }
-  .center{
-    text-align: center;
-  }
-  .pad-right1{
-    padding-right: 4em;
-  }
-  .brown1{
-    color: #4c3216;
-  }
-  .inline{
-    display: inline-block;
-  }
-  .padBottom{
-    padding-bottom: 2em;
-  }
-  @media (max-width: 991px) {
-    nav.navbar {
-      background: lightgray !important;
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
     }
-  }
-  #header_placeholder {
-    height:70px;
-    width:100%;
-    display:none;
-}
+
+    html {
+      overflow-y: scroll;
+    }
+
+    .navCustom {
+      background-color: #b59a77;
+
+    }
+
+    .bodyCustom {
+      background-color: #dbc4a6;
+      padding-top: 2em;
+    }
+
+    .fontCustom {
+      font-family: "Zilla Slab", serif !important;
+    }
+
+    .quotes {
+      font-family: "Zilla Slab", serif !important;
+      text-align: center;
+      font-size: 28px;
+      color: #000000;
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .pad-right1 {
+      padding-right: 4em;
+    }
+
+    .brown1 {
+      color: #4c3216;
+    }
+
+    .inline {
+      display: inline-block;
+    }
+
+    .padBottom {
+      padding-bottom: 2em;
+    }
+
+    @media (max-width: 991px) {
+      nav.navbar {
+        background: lightgray !important;
+      }
+    }
+
+    #header_placeholder {
+      height: 70px;
+      width: 100%;
+      display: none;
+    }
 
     .img-responsivex {
       height: auto;
       width: auto;
       max-height: 77px;
       max-width: 255px;
+    }
+
+    .captchaWrap {
+      padding-top: 2em;
     }
   </style>
 </head>
@@ -133,7 +157,8 @@
   <main class="site-main bodyCustom">
 
     <!-- Modal -->
-    <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -154,7 +179,8 @@
     <!----------------------------------------------------------------->
 
     <!-- Modal -->
-    <div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -175,37 +201,41 @@
     <!----------------------------------------------------------------->
 
     <div class="container contact-form">
-          <div class="container">
-            <div class="row">
-                <div class="contact-image col-lg-3">
-                    <i class="far fa-address-book fa-7x"></i>
-                </div>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-image col-lg-3">
+            <i class="far fa-address-book fa-7x"></i>
+          </div>
+        </div>
+      </div>
+      <form action="contact.php" method="post">
+        <h3 class="center padBottom">Drop Us a Message</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="visitor_name" class="form-control" placeholder="Your Name *" value=""
+                pattern=[A-Z\sa-z]{3,20} required />
             </div>
-                <form action="contact.php" method="post">
-                    <h3 class="center padBottom">Drop Us a Message</h3>
-                   <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="visitor_name" class="form-control" placeholder="Your Name *" value="" pattern=[A-Z\sa-z]{3,20} required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="visitor_email" class="form-control" placeholder="Your Email *" value="" required/>
-                            </div>
-                            <div class="form-group">
-                                <input name="visitor_phone" class="form-control" placeholder="Your Phone Number ex: 814823546" value="" required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea name="visitor_message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <div class="form-group">
+              <input type="email" name="visitor_email" class="form-control" placeholder="Your Email *" value=""
+                required />
+            </div>
+            <div class="form-group">
+              <input name="visitor_phone" class="form-control" placeholder="Your Phone Number ex: 814823546" value=""
+                required />
+            </div>
+            <div class="form-group">
+              <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea name="visitor_message" class="form-control" placeholder="Your Message *"
+                style="width: 100%; height: 150px;" required></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
 
   </main>
@@ -222,25 +252,29 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-4  col-md-6 col-sm-6 center">
+        <div class="col-lg-4 col-md-6 col-sm-6 center">
           <div class="single-footer-widget">
             <h6 class="pad-right1">Newsletter</h6>
             <p class="pad-right1">Stay up to date with our latest news</p>
             <div class="" id="mc_embed_signup">
 
-              <form target="_blank" action="insert.php" method="post" class="form-inline">
+              <form target="_blank" action="captcha2.php" method="post" class="form-inline">
 
                 <div class="d-flex flex-row">
 
                   <input class="form-control" name="email" placeholder="Enter Email" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-                  <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <!-- <div class="captchaWrap">
+                    <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"></div>
+                  </div> -->
+                  <button id="button1" type="submit" value="Submit" class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
                   <!--<div style="position: absolute; left: -5000px;">
                     <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                   </div>-->
 
+                </div>
+                <div class="captchaWrap">
+                  <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu" data-callback="enableBtn"></div>
                 </div>
                 <div class="info"></div>
               </form>
@@ -272,11 +306,21 @@
     </div>
   </footer>
   <!--================ End Footer Area =================-->
-
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-
+  <script>
+    $(window).on('load', function () {
+      document.getElementById("button1").disabled = true;
+    });
+    </script>
+  
+    <script>
+      function enableBtn(){
+        document.getElementById("button1").disabled = false;
+      }
+    </script>
 </body>
+
 </html>
