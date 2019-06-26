@@ -365,7 +365,11 @@
                         type="email">
                     </div>
                   </div>
-                  <button type="submit" value="Submit" class="click-btn bbtns d-block mt-20 w-100">Subcribe</button>
+                  <button id="button2" type="submit" value="Submit" class="click-btn bbtns d-block mt-20 w-100">Subcribe</button>
+                  <div class="captchaWrap">
+                    <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"
+                      data-callback="enableBtn"></div>
+                  </div>
                 </div>
               </form>
 
@@ -471,12 +475,24 @@
       document.getElementById("button1").disabled = true;
     });
     </script>
-  
+
     <script>
       function enableBtn(){
         document.getElementById("button1").disabled = false;
       }
     </script>
+
+    <script>
+      $(window).on('load', function () {
+        document.getElementById("button2").disabled = true;
+      });
+      </script>
+
+      <script>
+        function enableBtn(){
+          document.getElementById("button2").disabled = false;
+        }
+      </script>
 </body>
 
 </html>

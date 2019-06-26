@@ -350,26 +350,30 @@
           </div>
 
           <!-- Start Sidebar -->
-          <div id="mModalx" class="col-lg-4 sidebar-widgets">
+          <div class="col-lg-4 sidebar-widgets">
             <div class="widget-wrap">
               <form action="insert.php" method="post">
                 <div class="single-sidebar-widget newsletter-widget">
                   <h4 class="single-sidebar-widget__title">Newsletter</h4>
                   <div class="form-group mt-30">
                     <div class="col-autos">
-                      <input type="text" name="email" class="form-control" id="inlineFormInputGroup"
-                        placeholder="Enter email" onfocus="this.placeholder = ''"
-                        onblur="this.placeholder = 'Enter email'">
+                      <input name="email" class="form-control" id="inlineFormInputGroup" placeholder="Enter Email"
+                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required=""
+                        type="email">
                     </div>
                   </div>
-                  <button type="submit" value="Submit" class="bbtns d-block mt-20 w-100">Subcribe</button>
+                  <button id="button2" type="submit" value="Submit" class="click-btn bbtns d-block mt-20 w-100">Subcribe</button>
+                  <div class="captchaWrap">
+                    <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"
+                      data-callback="enableBtn"></div>
+                  </div>
                 </div>
               </form>
 
             </div>
           </div>
-        </div>
-        <!-- End Sidebar -->
+          </div>
+          <!-- End Sidebar -->
       </div>
     </section>
     <!--================ End Area =================-->
@@ -494,6 +498,17 @@
   <script>
     function enableBtn() {
       document.getElementById("button1").disabled = false;
+    }
+  </script>
+  <script>
+    $(window).on('load', function () {
+      document.getElementById("button2").disabled = true;
+    });
+  </script>
+
+  <script>
+    function enableBtn() {
+      document.getElementById("button2").disabled = false;
     }
   </script>
 </body>

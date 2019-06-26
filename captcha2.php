@@ -42,6 +42,7 @@
     $sql = "INSERT INTO newsletter (email) VALUES ('$clean_email')";
     if(mysqli_query($link, $sql)){
         header("Location: index2.html");
+        die();
     } else{
         echo "ERROR: Not able to execute $sql. " . mysqli_error($link);
     }
