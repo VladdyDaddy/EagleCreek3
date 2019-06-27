@@ -13,17 +13,24 @@ $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 
 $clean_email = filter_var($email,FILTER_SANITIZE_EMAIL);
 
+$check=mysqli_query($link,"select * from newsletter where email='$clean_email'");
+$checkrows=mysqli_num_rows($check);
+
 if ($email == $clean_email && filter_var($email,FILTER_VALIDATE_EMAIL)){
    // now you know the original email was safe to insert.
    // insert into database code go here.
 }
-
-// Attempt insert query execution
-$sql = "INSERT INTO newsletter (email) VALUES ('$clean_email')";
-if(mysqli_query($link, $sql)){
-    header("Location: index2.html");
-} else{
-    echo "ERROR: Not able to execute $sql. " . mysqli_error($link);
+if($checkrows>0) {
+  header("Location: index3.html");
+  }
+else{
+    // Attempt insert query execution
+    $sql = "INSERT INTO newsletter (email) VALUES ('$clean_email')";
+        if(mysqli_query($link, $sql)){
+            header("Location: index2.html");
+        } else{
+            echo "ERROR: Not able to execute $sql. " . mysqli_error($link);
+        }
 }
 
 // Close connection
