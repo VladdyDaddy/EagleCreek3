@@ -242,14 +242,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 center padBottom">
-          <a href="export.php" class="btn btn-info" role="button">Dump Email Database!</a>
-        </div>
-      </div>
-    </div>
-
   </main>
 
   <!--================ Start Footer Area =================-->
