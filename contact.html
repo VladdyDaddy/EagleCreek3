@@ -63,7 +63,7 @@
     }
 
     .center {
-      text-align: center;
+      text-align: center !important;
     }
 
     .pad-right1 {
@@ -203,21 +203,18 @@
     <div class="container contact-form">
       <div class="container">
         <div class="row">
-          <div class="contact-image col-lg-3">
-            <i class="far fa-address-book fa-7x"></i>
-          </div>
         </div>
       </div>
       <form action="contact.php" method="post">
-        <h3 class="center padBottom">Drop Us a Message</h3>
+        <h3 class="center padBottom">Contact Us</h3>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-lg-12 text-center">
             <div class="form-group">
-              <input type="text" name="visitor_name" class="form-control" placeholder="Your Name *" value=""
+              <input type="text" name="visitor_name" class="form-control" placeholder="Your Name" value=""
                 pattern=[A-Z\sa-z]{3,20} required />
             </div>
             <div class="form-group">
-              <input type="email" name="visitor_email" class="form-control" placeholder="Your Email *" value=""
+              <input type="email" name="visitor_email" class="form-control" placeholder="Your Email" value=""
                 required maxlength="30"/>
             </div>
             <div class="form-group">
@@ -225,15 +222,13 @@
                 required maxlength="11"/>
             </div>
             <div class="form-group">
-              <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
               <textarea name="visitor_message" class="form-control" placeholder="Your Message (500 characters max)"
                 style="width: 100%; height: 150px;" required maxlength="500"></textarea>
             </div>
-          </div>
+            <div class="form-group">
+              <input type="submit" name="btnSubmit" class="btn btn-primary" value="Send Message" />
+            </div>
+        </div>
         </div>
       </form>
     </div>
