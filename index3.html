@@ -122,6 +122,28 @@
     .margin-bot{
       margin-bottom: 2em;
     }
+
+    .icon-size {
+      height: 13px;
+      width: 13px;
+    }
+
+    .image_off,
+    #home:hover .image_on {
+      display: none
+    }
+
+    .image_on,
+    #home:hover .image_off {
+      display: block
+    }
+
+    .footer-icon{
+      height: 16px;
+      width: 16px;
+    }
+
+    
   </style>
 </head>
 
@@ -160,9 +182,12 @@
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/eaglecreeklodge/?ref=bookmarks"><i class="ti-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/eaglecreeklodge/"><i class="ti-instagram"></i></a></li>
+              <li><a href="https://www.airbnb.com/rooms/24010656?source_impression_id=p3_1563298722_rFMIvY6lEBj9MTFS" id="home"><img class="image_on icon-size" src="img\headerLogos\black airbnb.png" alt="logo" /><img class="image_off icon-size"
+                src="img\headerLogos\white airbnb.png" alt="logo" /></a></li>
+              <li><a href="https://www.vrbo.com/923537" id="home"><img class="image_on icon-size" src="img\headerLogos\black v.png" alt="logo" /><img class="image_off icon-size"
+                src="img\headerLogos\white v.png" alt="logo" /></a></li>
             </ul>
           </div>
         </div>
@@ -494,18 +519,15 @@
 
         <div class="col-lg-3  col-md-6 col-sm-6 right">
           <div class="single-footer-widget">
-            <h6>Follow Us</h6>
+            <h6>Check Us Out</h6>
             <p> </p>
             <div class="footer-social right">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <a href="https://www.facebook.com/eaglecreeklodge/?ref=bookmarks"><i class="ti-facebook"></i></a>
+              <a href="https://www.instagram.com/eaglecreeklodge/"><i class="ti-instagram"></i></a>
+              <a href="https://www.airbnb.com/rooms/24010656?source_impression_id=p3_1563298722_rFMIvY6lEBj9MTFS" id="home"><img class="image_on footer-icon" src="img\headerLogos\airbnb 555555.png" alt="logo" /><img class="image_off footer-icon"
+                src="img\headerLogos\airbnb ff9907.png" alt="logo" /></a>
+              <a href="https://www.vrbo.com/923537" id="home"><img class="image_on footer-icon" src="img\headerLogos\v 555555.png" alt="logo" /><img class="image_off footer-icon"
+                src="img\headerLogos\v ff9907.png" alt="logo" /></a>
             </div>
           </div>
         </div>

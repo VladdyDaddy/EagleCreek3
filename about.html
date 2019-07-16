@@ -98,9 +98,10 @@
       display: none;
     }
 
-    .captchaWrap{
-  padding-top: 2em;
-}
+    .captchaWrap {
+      padding-top: 2em;
+    }
+
     .rotateimg180 {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
@@ -109,38 +110,60 @@
       transform: rotate(180deg);
     }
 
-    .aboutText{
+    .aboutText {
       font-size: 1.5em;
     }
 
-    .marginBot{
+    .marginBot {
       margin-bottom: 5em;
     }
 
-        .img-responsivex {
-          height: auto;
-          width: auto;
-          max-height: 77px;
-          max-width: 255px;
-        }
-      </style>
-    </head>
+    .img-responsivex {
+      height: auto;
+      width: auto;
+      max-height: 77px;
+      max-width: 255px;
+    }
 
-    <body>
-      <!--================Header Menu Area =================-->
-      <header class="header_area navCustom">
-        <div class="main_menu">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container box_1620">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="logo"
-                  class="img-responsivex"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+    .icon-size {
+      height: 13px;
+      width: 13px;
+    }
+
+    .image_off,
+    #home:hover .image_on {
+      display: none
+    }
+
+    .image_on,
+    #home:hover .image_off {
+      display: block
+    }
+
+    .footer-icon{
+      height: 16px;
+      width: 16px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!--================Header Menu Area =================-->
+  <header class="header_area navCustom">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="logo"
+              class="img-responsivex"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav mr-auto">
@@ -161,9 +184,12 @@
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/eaglecreeklodge/?ref=bookmarks"><i class="ti-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/eaglecreeklodge/"><i class="ti-instagram"></i></a></li>
+              <li><a href="https://www.airbnb.com/rooms/24010656?source_impression_id=p3_1563298722_rFMIvY6lEBj9MTFS" id="home"><img class="image_on icon-size" src="img\headerLogos\black airbnb.png" alt="logo" /><img class="image_off icon-size"
+                src="img\headerLogos\white airbnb.png" alt="logo" /></a></li>
+              <li><a href="https://www.vrbo.com/923537" id="home"><img class="image_on icon-size" src="img\headerLogos\black v.png" alt="logo" /><img class="image_off icon-size"
+                src="img\headerLogos\white v.png" alt="logo" /></a></li>
             </ul>
           </div>
         </div>
@@ -189,14 +215,16 @@
           <img class="img-responsive" src="img/frontCar/people1.jpg" alt="About1">
         </div>
         <div class="col-lg-6">
-          <p class="black1 aboutText">Eagle Creek Lodge is conveniently located in Port Matilda, Pennsylvania, just 12 miles from
+          <p class="black1 aboutText">Eagle Creek Lodge is conveniently located in Port Matilda, Pennsylvania, just 12
+            miles from
             Penn
             State University. We are situated in the center of the scenic Bald Eagle Valley on the banks of
             the Bald Eagle Creek. The lodge is designed to accommodate between 18 and 20 people and is fully
             equipped with a custom kitchen and bar as well as three surround sound televisions, making it
             the perfect space for entertaining large groups.
           </p>
-          <p class="black1 aboutText">Whether you are looking to plan a relaxing weekend getaway with family and friends or attend
+          <p class="black1 aboutText">Whether you are looking to plan a relaxing weekend getaway with family and friends
+            or attend
             a
             Penn State sporting event, Eagle Creek Lodge is the place for you. During football season, our
             cottage is a great place to spend the day before and after the game with ample space for all
@@ -223,7 +251,11 @@
         <div class="col-lg-6">
           <p class="black1 aboutText">
             <b>[Left to Right] Pierre, Stephen, Vladimir, Rory, Rihad</b><br>
-            With the help of some great Summer Interns from Surge Business Development, Eagle Creek has been able to flourish more than ever before. While pairing these interns with our employees and owners, we have been able to collaborate on ideas that after implemented took us to the next level. When great minds come together, great things happen. We promise that staying at Eagle Creek will be a tremendous experience that will have you wanting to come back for years to come!
+            With the help of some great Summer Interns from Surge Business Development, Eagle Creek has been able to
+            flourish more than ever before. While pairing these interns with our employees and owners, we have been able
+            to collaborate on ideas that after implemented took us to the next level. When great minds come together,
+            great things happen. We promise that staying at Eagle Creek will be a tremendous experience that will have
+            you wanting to come back for years to come!
           </p>
         </div>
         <div class="col-lg-6 aboutText">
@@ -242,7 +274,8 @@
           <div class="single-footer-widget">
             <h6>About Us</h6>
             <p>
-              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State sporting event, Eagle Creek Lodge is the place for you!
+              Whether you are looking to plan a relaxing weekend getaway with family and friends or attend a Penn State
+              sporting event, Eagle Creek Lodge is the place for you!
             </p>
           </div>
         </div>
@@ -261,14 +294,16 @@
                   <!-- <div class="captchaWrap">
                     <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"></div>
                   </div> -->
-                  <button id="button1" type="submit" value="Submit" class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <button id="button1" type="submit" value="Submit" class="click-btn btn btn-default"><span
+                      class="lnr lnr-arrow-right"></span></button>
                   <!--<div style="position: absolute; left: -5000px;">
                     <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                   </div>-->
 
                 </div>
                 <div class="captchaWrap">
-                  <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu" data-callback="enableBtn"></div>
+                  <div class="g-recaptcha" data-sitekey="6LejnaoUAAAAAPqilM3ED-jsPYX1gFNU7iPJ_guu"
+                    data-callback="enableBtn"></div>
                 </div>
                 <div class="info"></div>
               </form>
@@ -278,18 +313,15 @@
 
         <div class="col-lg-3  col-md-6 col-sm-6 right">
           <div class="single-footer-widget">
-            <h6>Follow Us</h6>
+            <h6>Check Us Out</h6>
             <p> </p>
             <div class="footer-social right">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <a href="https://www.facebook.com/eaglecreeklodge/?ref=bookmarks"><i class="ti-facebook"></i></a>
+              <a href="https://www.instagram.com/eaglecreeklodge/"><i class="ti-instagram"></i></a>
+              <a href="https://www.airbnb.com/rooms/24010656?source_impression_id=p3_1563298722_rFMIvY6lEBj9MTFS" id="home"><img class="image_on footer-icon" src="img\headerLogos\airbnb 555555.png" alt="logo" /><img class="image_off footer-icon"
+                src="img\headerLogos\airbnb ff9907.png" alt="logo" /></a>
+              <a href="https://www.vrbo.com/923537" id="home"><img class="image_on footer-icon" src="img\headerLogos\v 555555.png" alt="logo" /><img class="image_off footer-icon"
+                src="img\headerLogos\v ff9907.png" alt="logo" /></a>
             </div>
           </div>
         </div>
@@ -306,13 +338,13 @@
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-  $(window).on('load', function () {
-    document.getElementById("button1").disabled = true;
-  });
+    $(window).on('load', function () {
+      document.getElementById("button1").disabled = true;
+    });
   </script>
 
   <script>
-    function enableBtn(){
+    function enableBtn() {
       document.getElementById("button1").disabled = false;
     }
   </script>
